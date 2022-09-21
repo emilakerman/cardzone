@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.hide()//REMOVES THE TOP ACTION BAR
 
         //QUIT BUTTON
         quitButton = findViewById(R.id.quitButton)
