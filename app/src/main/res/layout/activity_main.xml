@@ -37,13 +37,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/quitButton"
         android:layout_width="180dp"
         android:layout_height="80dp"
         android:layout_marginTop="30dp"
         android:backgroundTint="#448AFF"
         android:text="QUIT"
-        android:textSize="34"
+        android:textSize="34dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +56,7 @@
         android:layout_marginTop="30dp"
         android:backgroundTint="#448AFF"
         android:text="DIFFICULTY"
-        android:textSize="24sp"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
