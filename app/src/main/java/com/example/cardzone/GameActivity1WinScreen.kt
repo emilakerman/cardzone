@@ -8,6 +8,7 @@ import android.widget.Button
 class GameActivity1WinScreen : AppCompatActivity() {
 
     lateinit var mainMenuButton : Button
+    lateinit var levelTwoButton : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,8 +17,13 @@ class GameActivity1WinScreen : AppCompatActivity() {
 
         mainMenuButton = findViewById(R.id.mainMenuButton)
         mainMenuButton.setOnClickListener {
-            val intent3 = Intent(this, MainActivity::class.java)
-            startActivity(intent3)
+            val mainMenu = Intent(this, MainActivity::class.java)
+            startActivity(mainMenu)
+        }
+        levelTwoButton = findViewById(R.id.levelTwoButton)
+        levelTwoButton.setOnClickListener {
+            val levelTwo = Intent(this, GameActivity1Level2::class.java)
+            startActivity(levelTwo)
         }
     }
 }

@@ -25,7 +25,7 @@ class GameActivity1 : AppCompatActivity() {
         aceOfClubs = findViewById(R.id.aceOfClubs)
         aceOfClubs.setOnClickListener {
             move()
-            aceOfClubs.animate().rotationBy(360f)
+            aceOfClubs.animate().rotationBy(360f)//maybe move to function?
             points++
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()

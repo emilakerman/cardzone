@@ -17,15 +17,15 @@ class GameActivity1LoseScreen : AppCompatActivity() {
 
         backtoGameButton = findViewById(R.id.backtoGameButton)
         backtoGameButton.setOnClickListener {
-            val intent5 = Intent(this, GameActivity1::class.java)
-            startActivity(intent5)
+            val tryAgain = Intent(this, GameActivity1::class.java)
+            startActivity(tryAgain)
         }
 
 
         mainMenuButton3 = findViewById(R.id.mainMenuButton3)
         mainMenuButton3.setOnClickListener {
-            val intent4 = Intent(this, MainActivity::class.java)
-            startActivity(intent4)
+            val mainMenu = Intent(this, MainActivity::class.java)
+            startActivity(mainMenu)
         }
 
 

@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GameActivity1WinScreen">
+    tools:context=".GameActivity1Level2WinScreen">
 
     <ImageView
-        android:id="@+id/backgroundgame"
+        android:id="@+id/backgroundgame5"
         android:layout_width="1290dp"
         android:layout_height="1225dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/gradientbg2" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="200dp"
@@ -29,29 +29,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/mainMenuButton"
-        android:layout_width="157dp"
-        android:layout_height="63dp"
-        android:layout_marginBottom="300dp"
-        android:text="Main menu"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/levelTwoButton" />
-
-    <Button
-        android:id="@+id/levelTwoButton"
-        android:layout_width="157dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="30dp"
-        android:text="LEVEL 2"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/mainMenuButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 </androidx.constraintlayout.widget.ConstraintLayout>
