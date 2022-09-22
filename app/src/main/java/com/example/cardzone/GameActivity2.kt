@@ -21,12 +21,23 @@ class GameActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_game2)
         supportActionBar?.hide()//REMOVES THE TOP ACTION BAR
 
+        //QA
+        answerView = findViewById(R.id.answerView)
+        val answerButton = findViewById<Button>(R.id.answerButton)
+        answerButton.setOnClickListener {
+            submitButton()
+        }
+
+        //SHUFFLE
         val changeCardButton = findViewById<Button>(R.id.changeCardButton)
         changeCardButton.setOnClickListener {
             shuffleCards()
         }
 
 
+    }
+    fun submitButton() {
+        
     }
     fun shuffleCards() {
         val deck = mutableListOf<Card>()
@@ -146,4 +157,5 @@ class GameActivity2 : AppCompatActivity() {
         var textView5 = findViewById<TextView>(R.id.textView5)
         textView5.text = currentCard.value.toString()
     }
+
 }

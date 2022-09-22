@@ -1,5 +1,6 @@
 package com.example.cardzone
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -18,6 +19,7 @@ class GameActivity1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game1)
         supportActionBar?.hide()//REMOVES THE TOP ACTION BAR
+        val intent2 = Intent(this, GameActivity1WinScreen::class.java)
 
         aceOfClubs = findViewById(R.id.aceOfClubs)
         aceOfClubs.setOnClickListener {
@@ -28,7 +30,8 @@ class GameActivity1 : AppCompatActivity() {
             points2.text = points.toString()
             when (points) {
                 -1 -> finish()
-                10 -> points2.text = "YOU WIN"
+                10 -> //points2.text = "YOU WIN"
+                    startActivity(intent2)
             }
         }
         aceOfSpades = findViewById(R.id.aceOfSpades)
@@ -40,7 +43,8 @@ class GameActivity1 : AppCompatActivity() {
             points2.text = points.toString()
             when (points) {
                 -1 -> finish()
-                10 -> points2.text = "YOU WIN"
+                10 -> //points2.text = "YOU WIN"
+                    startActivity(intent2)
             }
         }
         aceOfDiamonds = findViewById(R.id.aceOfDiamonds)
@@ -52,7 +56,8 @@ class GameActivity1 : AppCompatActivity() {
             points2.text = points.toString()
             when (points) {
                 -1 -> finish()
-                10 -> points2.text = "YOU WIN"
+                10 -> //points2.text = "YOU WIN"
+                    startActivity(intent2)
             }
         }
         aceOfHearts = findViewById(R.id.aceOfHearts)
@@ -64,7 +69,8 @@ class GameActivity1 : AppCompatActivity() {
             points2.text = points.toString()
             when (points) {
                 -1 -> finish()
-                10 -> points2.text = "YOU WIN"
+                10 -> //points2.text = "YOU WIN"
+                    startActivity(intent2)
             }
         }
     }
