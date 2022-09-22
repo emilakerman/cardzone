@@ -1,22 +1,15 @@
 package com.example.cardzone
 
-import android.animation.ObjectAnimator
-import android.content.Intent
-import android.graphics.Path
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.graphics.rotationMatrix
 import kotlin.random.Random
 
 class GameActivity1 : AppCompatActivity() {
 
     lateinit var aceOfSpades : ImageView
-    lateinit var aceOfClovers : ImageView
+    lateinit var aceOfClubs : ImageView
     lateinit var aceOfDiamonds : ImageView
     lateinit var aceOfHearts : ImageView
     var points = 0
@@ -26,10 +19,10 @@ class GameActivity1 : AppCompatActivity() {
         setContentView(R.layout.activity_game1)
         supportActionBar?.hide()//REMOVES THE TOP ACTION BAR
 
-        aceOfClovers = findViewById(R.id.aceOfClovers)
-        aceOfClovers.setOnClickListener {
+        aceOfClubs = findViewById(R.id.aceOfClubs)
+        aceOfClubs.setOnClickListener {
             move()
-            aceOfClovers.animate().rotationBy(360f)
+            aceOfClubs.animate().rotationBy(360f)
             points++
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()
@@ -83,7 +76,7 @@ class GameActivity1 : AppCompatActivity() {
             .setDuration(500)
             .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
             .start()
-        aceOfClovers.animate()
+        aceOfClubs.animate()
             .translationX(randomPosition())
             .translationY(randomPosition())
             .setDuration(500)

@@ -42,14 +42,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/aceOfClovers"
+        android:id="@+id/aceOfClubs"
         android:layout_width="100dp"
         android:layout_height="120dp"
         android:layout_marginBottom="250dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/aceofclovers" />
+        app:srcCompat="@drawable/aceofclubs" />
 
     <ImageView
         android:id="@+id/aceOfDiamonds"
@@ -59,7 +59,7 @@
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/aceOfClovers"
+        app:layout_constraintEnd_toStartOf="@+id/aceOfClubs"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/aceofdiamonds" />
 
