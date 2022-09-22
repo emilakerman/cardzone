@@ -26,12 +26,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/playButton"
+        android:id="@+id/game1Button"
         android:layout_width="180dp"
         android:layout_height="80dp"
         android:layout_marginTop="80dp"
         android:backgroundTint="#448AFF"
-        android:text="PLAY"
+        android:text="GAME 1"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,20 +48,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/game2Button" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/game2Button"
         android:layout_width="180dp"
         android:layout_height="80dp"
         android:layout_marginTop="30dp"
         android:backgroundTint="#448AFF"
-        android:text="DIFFICULTY"
-        android:textSize="22sp"
+        android:text="GAME 2"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playButton" />
+        app:layout_constraintTop_toBottomOf="@+id/game1Button" />
 
     <TextView
         android:id="@+id/textView2"

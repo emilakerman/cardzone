@@ -35,6 +35,7 @@ class GameActivity1 : AppCompatActivity() {
             points2.text = points.toString()
             when (points) {
                 -1 -> finish()
+                10 -> points2.text = "YOU WIN"
             }
         }
         aceOfSpades = findViewById(R.id.aceOfSpades)
@@ -46,17 +47,19 @@ class GameActivity1 : AppCompatActivity() {
             points2.text = points.toString()
             when (points) {
                 -1 -> finish()
+                10 -> points2.text = "YOU WIN"
             }
         }
         aceOfDiamonds = findViewById(R.id.aceOfDiamonds)
         aceOfDiamonds.setOnClickListener {
             move()
-            aceOfHearts.animate().rotationBy(360f)
+            aceOfDiamonds.animate().rotationBy(360f)
             points--
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()
             when (points) {
                 -1 -> finish()
+                10 -> points2.text = "YOU WIN"
             }
         }
         aceOfHearts = findViewById(R.id.aceOfHearts)
@@ -68,6 +71,7 @@ class GameActivity1 : AppCompatActivity() {
             points2.text = points.toString()
             when (points) {
                 -1 -> finish()
+                10 -> points2.text = "YOU WIN"
             }
         }
     }
