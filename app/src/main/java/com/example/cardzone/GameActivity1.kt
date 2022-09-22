@@ -20,6 +20,7 @@ class GameActivity1 : AppCompatActivity() {
         setContentView(R.layout.activity_game1)
         supportActionBar?.hide()//REMOVES THE TOP ACTION BAR
         val intent2 = Intent(this, GameActivity1WinScreen::class.java)
+        val intent6 = Intent(this, GameActivity1LoseScreen::class.java)
 
         aceOfClubs = findViewById(R.id.aceOfClubs)
         aceOfClubs.setOnClickListener {
@@ -29,9 +30,8 @@ class GameActivity1 : AppCompatActivity() {
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()
             when (points) {
-                -1 -> finish()
-                10 -> //points2.text = "YOU WIN"
-                    startActivity(intent2)
+                -1 -> startActivity(intent6)
+                10 -> startActivity(intent2)
             }
         }
         aceOfSpades = findViewById(R.id.aceOfSpades)
@@ -42,9 +42,8 @@ class GameActivity1 : AppCompatActivity() {
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()
             when (points) {
-                -1 -> finish()
-                10 -> //points2.text = "YOU WIN"
-                    startActivity(intent2)
+                -1 -> startActivity(intent6)
+                10 -> startActivity(intent2)
             }
         }
         aceOfDiamonds = findViewById(R.id.aceOfDiamonds)
@@ -55,9 +54,8 @@ class GameActivity1 : AppCompatActivity() {
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()
             when (points) {
-                -1 -> finish()
-                10 -> //points2.text = "YOU WIN"
-                    startActivity(intent2)
+                -1 -> startActivity(intent6)
+                10 -> startActivity(intent2)
             }
         }
         aceOfHearts = findViewById(R.id.aceOfHearts)
@@ -68,9 +66,8 @@ class GameActivity1 : AppCompatActivity() {
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()
             when (points) {
-                -1 -> finish()
-                10 -> //points2.text = "YOU WIN"
-                    startActivity(intent2)
+                -1 -> startActivity(intent6)
+                10 -> startActivity(intent2)
             }
         }
     }
