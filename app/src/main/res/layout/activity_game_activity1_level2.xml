@@ -22,12 +22,23 @@
         android:layout_height="match_parent"
         tools:context=".GameActivity1">
 
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="275dp"
+            android:layout_height="154dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/pointcontainer" />
+
         <TextView
             android:id="@+id/points"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:text="0"
+            android:textColor="#F1EDED"
             android:textSize="34dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -112,6 +123,18 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/eightofclubs" />
 
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="serif"
+            android:text="5 POINTS TO WIN"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
@@ -119,6 +142,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
+        android:fontFamily="serif"
         android:text="GET THE RED CARDS!"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

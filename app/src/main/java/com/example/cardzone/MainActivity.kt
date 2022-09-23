@@ -27,10 +27,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         //QUIT BUTTON - ta bort det här, appar har inga quit-knappar
-        val quitButton = findViewById<Button>(R.id.quitButton)
-        quitButton.setOnClickListener { finishAffinity() }
-
-
-
+        val game3Button = findViewById<Button>(R.id.game3Button)
+        game3Button.setOnClickListener {
+            val intent = Intent(this, GameActivity3::class.java)
+            startActivity(intent)
+        }
     }
 }

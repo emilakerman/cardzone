@@ -40,7 +40,7 @@ class GameActivity1Level2 : AppCompatActivity() {
             points2.text = points.toString()
             when (points) {
                 -1 -> startActivity(intent6)
-                10 -> startActivity(intent2)
+                5 -> startActivity(intent2)
             }
         }
         twoofDiamonds = findViewById(R.id.twoofDiamonds)
@@ -52,7 +52,7 @@ class GameActivity1Level2 : AppCompatActivity() {
             points2.text = points.toString()
             when (points) {
                 -1 -> startActivity(intent6)
-                10 -> startActivity(intent2)
+                5 -> startActivity(intent2)
             }
         }
         nineofClubs = findViewById(R.id.nineofClubs)
@@ -64,7 +64,7 @@ class GameActivity1Level2 : AppCompatActivity() {
             points2.text = points.toString()
             when (points) {
                 -1 -> startActivity(intent6)
-                10 -> startActivity(intent2)
+                5 -> startActivity(intent2)
             }
         }
         queenofClubs = findViewById(R.id.queenofClubs)
@@ -76,7 +76,7 @@ class GameActivity1Level2 : AppCompatActivity() {
             points2.text = points.toString()
             when (points) {
                 -1 -> startActivity(intent6)
-                10 -> startActivity(intent2)
+                5 -> startActivity(intent2)
             }
         }
         threeofClubs = findViewById(R.id.threeofClubs)
@@ -88,7 +88,7 @@ class GameActivity1Level2 : AppCompatActivity() {
             points2.text = points.toString()
             when (points) {
                 -1 -> startActivity(intent6)
-                10 -> startActivity(intent2)
+                5 -> startActivity(intent2)
             }
         }
         twoofSpades = findViewById(R.id.twoofSpades)
@@ -100,7 +100,7 @@ class GameActivity1Level2 : AppCompatActivity() {
             points2.text = points.toString()
             when (points) {
                 -1 -> startActivity(intent6)
-                10 -> startActivity(intent2)
+                5 -> startActivity(intent2)
             }
         }
         eightofClubs = findViewById(R.id.eightofClubs)
@@ -112,7 +112,7 @@ class GameActivity1Level2 : AppCompatActivity() {
             points2.text = points.toString()
             when (points) {
                 -1 -> startActivity(intent6)
-                10 -> startActivity(intent2)
+                5 -> startActivity(intent2)
             }
         }
         sixofSpades = findViewById(R.id.sixofSpades)
@@ -124,7 +124,7 @@ class GameActivity1Level2 : AppCompatActivity() {
             points2.text = points.toString()
             when (points) {
                 -1 -> startActivity(intent6)
-                10 -> startActivity(intent2)
+                5 -> startActivity(intent2)
             }
         }
 
