@@ -32,7 +32,7 @@ class GameActivity3 : AppCompatActivity() {
             }
         centerButton = findViewById(R.id.centerButton)
             centerButton.setOnClickListener {
-            movecenter()
+                movecenter()
         }
 
 
