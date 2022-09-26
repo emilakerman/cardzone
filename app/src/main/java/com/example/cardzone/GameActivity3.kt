@@ -1,18 +1,19 @@
 package com.example.cardzone
 
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Rect
+import android.graphics.RectF
+import android.graphics.drawable.shapes.RectShape
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
-import kotlin.random.Random
-import kotlin.random.Random.Default.nextInt
+import androidx.appcompat.app.AppCompatActivity
 
 class GameActivity3 : AppCompatActivity() {
 
     lateinit var mainCard : ImageView
-    lateinit var leftButton : Button
-    lateinit var rightButton : Button
-    lateinit var centerButton : Button
+    lateinit var fallingObject : ImageView
+    var collided : Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,23 +22,48 @@ class GameActivity3 : AppCompatActivity() {
 
         mainCard = findViewById(R.id.mainCard)
 
-        leftButton = findViewById(R.id.leftButton)
+        val leftButton = findViewById<Button>(R.id.leftButton)
             leftButton.setOnClickListener {
                 moveleft()
-
             }
-        rightButton = findViewById(R.id.rightButton)
+        val rightButton = findViewById<Button>(R.id.rightButton)
             rightButton.setOnClickListener {
                 moveright()
             }
-        centerButton = findViewById(R.id.centerButton)
+        val centerButton = findViewById<Button>(R.id.centerButton)
             centerButton.setOnClickListener {
                 movecenter()
+            }
+
+        fallingObject = findViewById(R.id.fallingObject)
+        moveObjectDown()
+
+        //MAKES THE IMAGEVIEWS INTO RECTANGLES??
+        val fallingObjectRect = Rect(
+            fallingObject.x.toInt(),
+            fallingObject.y.toInt(),
+            (fallingObject.x+fallingObject.width).toInt(),
+            (fallingObject.y+fallingObject.height).toInt())
+        val mainCardRect = Rect(
+            mainCard.x.toInt(),
+            mainCard.y.toInt(),
+            (mainCard.x+mainCard.width).toInt(),
+            (mainCard.y+mainCard.height).toInt())
+        if (mainCardRect.intersect(fallingObjectRect)) { //INTERSECT
+            collided = true
+            mainCard.animate().rotationBy(360f)
         }
-
-
-
+        if (collided) {
+            mainCard.animate().rotationBy(360f)
+        }
     }
+    fun moveObjectDownDirection() = (2500).toFloat()
+    fun moveObjectDown() {
+        fallingObject.animate()
+            .translationY(moveObjectDownDirection())
+            .setDuration(10000)
+    }
+
     fun movePositionLeft() = (-300).toFloat()
     fun moveleft() {
         mainCard.animate()

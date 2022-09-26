@@ -46,4 +46,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/rightButton"
         app:layout_constraintStart_toEndOf="@+id/leftButton" />
+
+    <ImageView
+        android:id="@+id/fallingObject"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/black_joker" />
 </androidx.constraintlayout.widget.ConstraintLayout>
