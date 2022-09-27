@@ -33,7 +33,6 @@ class GameActivity1Level2 : AppCompatActivity() {
 
         tenofHearts = findViewById(R.id.tenofHearts)
         tenofHearts.setOnClickListener {
-            move()
             tenofHearts.animate().rotationBy(360f)
             points++
             val points2 = findViewById<TextView>(R.id.points)
@@ -45,7 +44,6 @@ class GameActivity1Level2 : AppCompatActivity() {
         }
         twoofDiamonds = findViewById(R.id.twoofDiamonds)
         twoofDiamonds.setOnClickListener {
-            move()
             twoofDiamonds.animate().rotationBy(360f)
             points++
             val points2 = findViewById<TextView>(R.id.points)
@@ -57,7 +55,6 @@ class GameActivity1Level2 : AppCompatActivity() {
         }
         nineofClubs = findViewById(R.id.nineofClubs)
         nineofClubs.setOnClickListener {
-            move()
             nineofClubs.animate().rotationBy(360f)
             points--
             val points2 = findViewById<TextView>(R.id.points)
@@ -69,7 +66,6 @@ class GameActivity1Level2 : AppCompatActivity() {
         }
         queenofClubs = findViewById(R.id.queenofClubs)
         queenofClubs.setOnClickListener {
-            move()
             queenofClubs.animate().rotationBy(360f)
             points--
             val points2 = findViewById<TextView>(R.id.points)
@@ -81,7 +77,6 @@ class GameActivity1Level2 : AppCompatActivity() {
         }
         threeofClubs = findViewById(R.id.threeofClubs)
         threeofClubs.setOnClickListener {
-            move()
             threeofClubs.animate().rotationBy(360f)
             points--
             val points2 = findViewById<TextView>(R.id.points)
@@ -93,7 +88,6 @@ class GameActivity1Level2 : AppCompatActivity() {
         }
         twoofSpades = findViewById(R.id.twoofSpades)
         twoofSpades.setOnClickListener {
-            move()
             twoofSpades.animate().rotationBy(360f)
             points--
             val points2 = findViewById<TextView>(R.id.points)
@@ -105,7 +99,6 @@ class GameActivity1Level2 : AppCompatActivity() {
         }
         eightofClubs = findViewById(R.id.eightofClubs)
         eightofClubs.setOnClickListener {
-            move()
             eightofClubs.animate().rotationBy(360f)
             points--
             val points2 = findViewById<TextView>(R.id.points)
@@ -117,7 +110,6 @@ class GameActivity1Level2 : AppCompatActivity() {
         }
         sixofSpades = findViewById(R.id.sixofSpades)
         sixofSpades.setOnClickListener {
-            move()
             sixofSpades.animate().rotationBy(360f)
             points--
             val points2 = findViewById<TextView>(R.id.points)
@@ -127,8 +119,7 @@ class GameActivity1Level2 : AppCompatActivity() {
                 5 -> startActivity(intent2)
             }
         }
-
-
+        move()
     }
     fun randomPosition() = Random.nextInt(-500, 500).toFloat()
     fun move() {
@@ -138,55 +129,47 @@ class GameActivity1Level2 : AppCompatActivity() {
             .rotationBy(180f)
             .setDuration(300)
             .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
-            .start()
         eightofClubs.animate()
             .translationX(randomPosition())
             .translationY(randomPosition())
             .rotationBy(180f)
             .setDuration(300)
             .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
-            .start()
         twoofSpades.animate()
             .translationX(randomPosition())
             .translationY(randomPosition())
             .rotationBy(180f)
             .setDuration(300)
             .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
-            .start()
         threeofClubs.animate()
             .translationX(randomPosition())
             .translationY(randomPosition())
             .rotationBy(180f)
             .setDuration(300)
             .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
-            .start()
         queenofClubs.animate()
             .translationX(randomPosition())
             .translationY(randomPosition())
             .rotationBy(180f)
             .setDuration(300)
             .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
-            .start()
         nineofClubs.animate()
             .translationX(randomPosition())
             .translationY(randomPosition())
             .rotationBy(180f)
             .setDuration(300)
             .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
-            .start()
         twoofDiamonds.animate()
             .translationX(randomPosition())
             .translationY(randomPosition())
             .rotationBy(180f)
             .setDuration(300)
             .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
-            .start()
         tenofHearts.animate()
             .translationX(randomPosition())
             .translationY(randomPosition())
             .rotationBy(180f)
             .setDuration(300)
             .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
-            .start()
     }
 }

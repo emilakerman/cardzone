@@ -4,16 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
+    android:id="@+id/mainLayout"
     tools:context=".GameActivity2">
-
-    <ImageView
-        android:id="@+id/backgroud"
-        android:layout_width="592dp"
-        android:layout_height="914dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/gradientbg"
-        tools:layout_editor_absoluteY="-68dp" />
 
     <ImageView
         android:id="@+id/imageView"

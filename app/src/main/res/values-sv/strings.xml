@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cardzone</string>
+    <string name="get_black">TRYCK PÅ SVARTA KORTEN</string>
+    <string name="ten_points">10 POÄNG = VINST</string>
+    <string name="get_red">TRYCK PÅ RÖDA KORTEN</string>
+    <string name="five_points">5 POÄNG = VINST</string>
+    <string name="you_win">DU VANN</string>
+    <string name="you_lose">DU FÖRLORADE</string>
+    <string name="main_menu">HUVUDMENY</string>
+    <string name="lvl_two">NIVÅ 2</string>
+    <string name="try_again">FÖRSÖK IGEN</string>
+    <string name="zone_with_cards">EN ZON MED KORT</string>
+    <string name="game1">SPEL 1</string>
+    <string name="game2">SPEL 2</string>
+    <string name="game3">SPEL 3</string>
+</resources>

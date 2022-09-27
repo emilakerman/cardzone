@@ -15,6 +15,7 @@ class GameActivity1 : AppCompatActivity() {
     lateinit var aceOfHearts : ImageView
     var points = 0
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game1)
@@ -24,7 +25,6 @@ class GameActivity1 : AppCompatActivity() {
 
         aceOfClubs = findViewById(R.id.aceOfClubs)
         aceOfClubs.setOnClickListener {
-            move()
             aceOfClubs.animate().rotationBy(360f)//maybe move to function?
             points++
             val points2 = findViewById<TextView>(R.id.points)
@@ -36,7 +36,6 @@ class GameActivity1 : AppCompatActivity() {
         }
         aceOfSpades = findViewById(R.id.aceOfSpades)
         aceOfSpades.setOnClickListener {
-            move()
             aceOfSpades.animate().rotationBy(360f)
             points++
             val points2 = findViewById<TextView>(R.id.points)
@@ -48,7 +47,6 @@ class GameActivity1 : AppCompatActivity() {
         }
         aceOfDiamonds = findViewById(R.id.aceOfDiamonds)
         aceOfDiamonds.setOnClickListener {
-            move()
             aceOfDiamonds.animate().rotationBy(360f)
             points--
             val points2 = findViewById<TextView>(R.id.points)
@@ -60,7 +58,6 @@ class GameActivity1 : AppCompatActivity() {
         }
         aceOfHearts = findViewById(R.id.aceOfHearts)
         aceOfHearts.setOnClickListener {
-            move()
             aceOfHearts.animate().rotationBy(360f)
             points--
             val points2 = findViewById<TextView>(R.id.points)
@@ -70,6 +67,7 @@ class GameActivity1 : AppCompatActivity() {
                 10 -> startActivity(intent2)
             }
         }
+        move()
     }
     fun randomPosition() = Random.nextInt(-500, 500).toFloat()
     fun move() {
@@ -77,25 +75,21 @@ class GameActivity1 : AppCompatActivity() {
             .translationX(randomPosition())
             .translationY(randomPosition())
             .setDuration(500)
-            .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
-            .start()
+            .withEndAction(::move)
         aceOfClubs.animate()
             .translationX(randomPosition())
             .translationY(randomPosition())
             .setDuration(500)
-            .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
-            .start()
+            .withEndAction(::move)
         aceOfHearts.animate()
             .translationX(randomPosition())
             .translationY(randomPosition())
             .setDuration(500)
-            .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
-            .start()
+            .withEndAction(::move)
         aceOfDiamonds.animate()
             .translationX(randomPosition())
             .translationY(randomPosition())
             .setDuration(500)
-            .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
-            .start()
+            .withEndAction(::move)
     }
 }

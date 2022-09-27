@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Cardzone</string>
+    <string name="get_black">GET THE BLACK CARDS</string>
+    <string name="ten_points">10 POINTS TO WIN</string>
+    <string name="get_red">GET THE RED CARDS</string>
+    <string name="five_points">5 POINTS TO WIN</string>
+    <string name="you_win">YOU WIN</string>
+    <string name="you_lose">YOU LOSE</string>
+    <string name="main_menu">MAIN MENU</string>
+    <string name="lvl_two">LEVEL 2</string>
+    <string name="try_again">TRY AGAIN</string>
+    <string name="zone_with_cards">A ZONE WITH CARDS</string>
+    <string name="game1">GAME 1</string>
+    <string name="game2">GAME 2</string>
+    <string name="game3">GAME 3</string>
 </resources>

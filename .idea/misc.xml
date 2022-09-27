@@ -3,10 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_game1.xml" value="0.2860743204752605" />
+        <entry key="app/src/main/res/drawable/background_1.xml" value="0.18" />
+        <entry key="app/src/main/res/drawable/background_2.xml" value="0.18" />
+        <entry key="app/src/main/res/drawable/background_3.xml" value="0.18" />
+        <entry key="app/src/main/res/drawable/gradient_list.xml" value="0.2085" />
+        <entry key="app/src/main/res/layout/activity_game1.xml" value="0.31294708251953124" />
         <entry key="app/src/main/res/layout/activity_game2.xml" value="0.32597198486328127" />
-        <entry key="app/src/main/res/layout/activity_game3.xml" value="0.4138900756835938" />
-        <entry key="app/src/main/res/layout/activity_game_activity1_level2.xml" value="0.42837371826171877" />
+        <entry key="app/src/main/res/layout/activity_game3.xml" value="0.33372650146484384" />
+        <entry key="app/src/main/res/layout/activity_game_activity1_level2.xml" value="0.24" />
         <entry key="app/src/main/res/layout/activity_game_activity1_level2_lose_screen.xml" value="0.2770700636942675" />
         <entry key="app/src/main/res/layout/activity_game_activity1_level2_win_screen.xml" value="0.2409972299168975" />
         <entry key="app/src/main/res/layout/activity_game_activity1_lose_screen.xml" value="0.2883181441590721" />

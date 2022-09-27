@@ -1,9 +1,11 @@
 package com.example.cardzone
 
 import android.content.Intent
+import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.constraintlayout.widget.ConstraintLayout
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,6 +15,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()//REMOVES THE TOP ACTION BAR
+
+        /*
+        ConstraintLayout() constraintLayout = findViewById(R.id.mainLayout)
+        AnimationDrawable animationDrawable = constraintLayout.getBackground()
+        animationDrawable.setEnterFadeDuration(2500)
+        */
+
 
         //GAME1 BUTTON
         val game1Button = findViewById<Button>(R.id.game1Button)
