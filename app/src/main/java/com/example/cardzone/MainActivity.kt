@@ -8,20 +8,16 @@ import android.widget.Button
 import androidx.constraintlayout.widget.ConstraintLayout
 
 class MainActivity : AppCompatActivity() {
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        supportActionBar?.hide()//REMOVES THE TOP ACTION BAR
 
-        /*
-        ConstraintLayout() constraintLayout = findViewById(R.id.mainLayout)
-        AnimationDrawable animationDrawable = constraintLayout.getBackground()
-        animationDrawable.setEnterFadeDuration(2500)
-        */
-
+        //BACKGROUND GRADIENT ANIMATION
+        val rootLayout = findViewById<ConstraintLayout>(R.id.root_layout)
+        val animDrawable = rootLayout.background as AnimationDrawable
+        animDrawable.setEnterFadeDuration(10)
+        animDrawable.setExitFadeDuration(1000)
+        animDrawable.start()
 
         //GAME1 BUTTON
         val game1Button = findViewById<Button>(R.id.game1Button)
@@ -35,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, GameActivity2::class.java)
             startActivity(intent)
         }
-        //QUIT BUTTON - ta bort det här, appar har inga quit-knappar
+        //GAME3 BUTTON
         val game3Button = findViewById<Button>(R.id.game3Button)
         game3Button.setOnClickListener {
             val intent = Intent(this, GameActivity3::class.java)
