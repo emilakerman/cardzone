@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <EditText
-        android:id="@+id/answerView"
+        android:id="@+id/answerTextView"
         android:layout_width="225dp"
         android:layout_height="62dp"
         android:layout_marginBottom="250dp"
@@ -42,7 +42,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/answerView"
+        app:layout_constraintTop_toBottomOf="@+id/answerTextView"
         app:strokeColor="#984D4D" />
 
     <TextView
@@ -64,6 +64,6 @@
         app:layout_constraintBottom_toTopOf="@+id/changeCardButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/answerView" />
+        app:layout_constraintTop_toBottomOf="@+id/answerTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

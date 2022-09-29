@@ -22,20 +22,20 @@ class MainActivity : AppCompatActivity() {
         //GAME1 BUTTON
         val game1Button = findViewById<Button>(R.id.game1Button)
         game1Button.setOnClickListener {
-            val intent = Intent(this, GameActivity1::class.java)
-            startActivity(intent)
+            val game1 = Intent(this, GameActivity1::class.java)
+            startActivity(game1)
         }
         //GAME2 BUTTON
         val game2Button = findViewById<Button>(R.id.game2Button)
         game2Button.setOnClickListener {
-            val intent = Intent(this, GameActivity2::class.java)
-            startActivity(intent)
+            val game2 = Intent(this, GameActivity2::class.java)
+            //startActivity(game2)
         }
         //GAME3 BUTTON
         val game3Button = findViewById<Button>(R.id.game3Button)
         game3Button.setOnClickListener {
-            val intent = Intent(this, GameActivity3::class.java)
-            startActivity(intent)
+            val game3 = Intent(this, GameActivity3::class.java)
+            //startActivity(game3)
         }
     }
 }

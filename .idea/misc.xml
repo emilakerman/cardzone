@@ -4,9 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/background_1.xml" value="0.18" />
+        <entry key="app/src/main/res/drawable/background_1_lose.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/background_2.xml" value="0.18" />
+        <entry key="app/src/main/res/drawable/background_2_lose.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/background_3.xml" value="0.18" />
+        <entry key="app/src/main/res/drawable/background_3_lose.xml" value="0.2085" />
         <entry key="app/src/main/res/drawable/gradient_list.xml" value="0.2085" />
+        <entry key="app/src/main/res/drawable/gradient_list_lose.xml" value="0.2085" />
         <entry key="app/src/main/res/layout/activity_game1.xml" value="0.31294708251953124" />
         <entry key="app/src/main/res/layout/activity_game2.xml" value="0.32597198486328127" />
         <entry key="app/src/main/res/layout/activity_game3.xml" value="0.33372650146484384" />

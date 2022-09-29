@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.util.rangeTo
 import kotlin.random.Random
 
 class GameActivity1 : AppCompatActivity() {
@@ -19,9 +20,9 @@ class GameActivity1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game1)
-        supportActionBar?.hide()//REMOVES THE TOP ACTION BAR
-        val intent2 = Intent(this, GameActivity1WinScreen::class.java)
-        val intent6 = Intent(this, GameActivity1LoseScreen::class.java)
+        supportActionBar?.hide()
+        val winScreen = Intent(this, GameActivity1WinScreen::class.java)
+        val loseScreen = Intent(this, GameActivity1LoseScreen::class.java)
 
         aceOfClubs = findViewById(R.id.aceOfClubs)
         aceOfClubs.setOnClickListener {
@@ -30,8 +31,8 @@ class GameActivity1 : AppCompatActivity() {
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()
             when (points) {
-                -1 -> startActivity(intent6)
-                10 -> startActivity(intent2)
+                -1 -> startActivity(loseScreen)
+                10 -> startActivity(winScreen)
             }
         }
         aceOfSpades = findViewById(R.id.aceOfSpades)
@@ -41,8 +42,8 @@ class GameActivity1 : AppCompatActivity() {
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()
             when (points) {
-                -1 -> startActivity(intent6)
-                10 -> startActivity(intent2)
+                -1 -> startActivity(loseScreen)
+                10 -> startActivity(winScreen)
             }
         }
         aceOfDiamonds = findViewById(R.id.aceOfDiamonds)
@@ -52,8 +53,8 @@ class GameActivity1 : AppCompatActivity() {
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()
             when (points) {
-                -1 -> startActivity(intent6)
-                10 -> startActivity(intent2)
+                -1 -> startActivity(loseScreen)
+                10 -> startActivity(winScreen)
             }
         }
         aceOfHearts = findViewById(R.id.aceOfHearts)
@@ -63,33 +64,21 @@ class GameActivity1 : AppCompatActivity() {
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()
             when (points) {
-                -1 -> startActivity(intent6)
-                10 -> startActivity(intent2)
+                -1 -> startActivity(loseScreen)
+                10 -> startActivity(winScreen)
             }
         }
         move()
     }
     fun randomPosition() = Random.nextInt(-500, 500).toFloat()
-    fun move() {
-        aceOfSpades.animate()
+    fun move(duration: Long = 500){
+        val cardArray = arrayOf(aceOfSpades, aceOfClubs, aceOfHearts, aceOfDiamonds)
+        for (item in cardArray) {
+            item.animate()
             .translationX(randomPosition())
             .translationY(randomPosition())
-            .setDuration(500)
+            .setDuration(duration)
             .withEndAction(::move)
-        aceOfClubs.animate()
-            .translationX(randomPosition())
-            .translationY(randomPosition())
-            .setDuration(500)
-            .withEndAction(::move)
-        aceOfHearts.animate()
-            .translationX(randomPosition())
-            .translationY(randomPosition())
-            .setDuration(500)
-            .withEndAction(::move)
-        aceOfDiamonds.animate()
-            .translationX(randomPosition())
-            .translationY(randomPosition())
-            .setDuration(500)
-            .withEndAction(::move)
+        }
     }
 }

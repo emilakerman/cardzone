@@ -2,10 +2,14 @@ package com.example.cardzone
 
 import android.graphics.Rect
 import android.os.Bundle
+import android.os.CountDownTimer
+import android.os.Handler
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import kotlin.concurrent.fixedRateTimer
+import kotlin.random.Random
 
 class GameActivity3 : AppCompatActivity() {
 
@@ -33,10 +37,11 @@ class GameActivity3 : AppCompatActivity() {
             movecenter()
         }
 
+
         fallingObject = findViewById(R.id.fallingObject)
-        moveObjectDown()
+            moveObjectDown()
 
-
+        /*
         //MAKES THE IMAGEVIEWS INTO RECTANGLES??
         Rect()
         val fallingObjectRect = Rect(
@@ -56,6 +61,9 @@ class GameActivity3 : AppCompatActivity() {
             mainCard.animate().rotationBy(360f)
             Log.d("!!!", "pang!!!")
         }
+
+         */
+
     }
     fun moveObjectDownDirection() = (2500).toFloat()
     fun moveObjectDown() {

@@ -13,16 +13,16 @@ class Card(var image : Int, var value : Int, var suit : String)
 
 class GameActivity2 : AppCompatActivity() {
 
-    lateinit var answerView : EditText
+    lateinit var answerTextView : EditText
     var correctAnswer : Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game2)
-        supportActionBar?.hide()//REMOVES THE TOP ACTION BAR
+        supportActionBar?.hide()
 
         //QA
-        answerView = findViewById(R.id.answerView)
+        answerTextView = findViewById(R.id.answerTextView)
         val answerButton = findViewById<Button>(R.id.answerButton)
         answerButton.setOnClickListener {
             submitButton()
@@ -33,8 +33,6 @@ class GameActivity2 : AppCompatActivity() {
         changeCardButton.setOnClickListener {
             shuffleCards()
         }
-
-
     }
     fun submitButton() {
         
@@ -154,8 +152,7 @@ class GameActivity2 : AppCompatActivity() {
         val imageView = findViewById<ImageView>(R.id.imageView)
         imageView.setImageResource(currentCard.image)
         //TEXT
-        var textView5 = findViewById<TextView>(R.id.textView5)
+        val textView5 = findViewById<TextView>(R.id.textView5)
         textView5.text = currentCard.value.toString()
     }
-
 }

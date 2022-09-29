@@ -1,7 +1,6 @@
 package com.example.cardzone
 
 import android.content.Intent
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -27,8 +26,8 @@ class GameActivity1Level2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game_activity1_level2)
         supportActionBar?.hide()//REMOVES THE TOP ACTION BAR
-        val intent2 = Intent(this, GameActivity1Level2WinScreen::class.java)
-        val intent6 = Intent(this, GameActivity1Level2LoseScreen::class.java)
+        val winScreen = Intent(this, GameActivity1Level2WinScreen::class.java)
+        val loseScreen = Intent(this, GameActivity1Level2LoseScreen::class.java)
 
 
         tenofHearts = findViewById(R.id.tenofHearts)
@@ -38,8 +37,8 @@ class GameActivity1Level2 : AppCompatActivity() {
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()
             when (points) {
-                -1 -> startActivity(intent6)
-                5 -> startActivity(intent2)
+                -1 -> startActivity(loseScreen)
+                5 -> startActivity(winScreen)
             }
         }
         twoofDiamonds = findViewById(R.id.twoofDiamonds)
@@ -49,8 +48,8 @@ class GameActivity1Level2 : AppCompatActivity() {
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()
             when (points) {
-                -1 -> startActivity(intent6)
-                5 -> startActivity(intent2)
+                -1 -> startActivity(loseScreen)
+                5 -> startActivity(winScreen)
             }
         }
         nineofClubs = findViewById(R.id.nineofClubs)
@@ -60,8 +59,8 @@ class GameActivity1Level2 : AppCompatActivity() {
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()
             when (points) {
-                -1 -> startActivity(intent6)
-                5 -> startActivity(intent2)
+                -1 -> startActivity(loseScreen)
+                5 -> startActivity(winScreen)
             }
         }
         queenofClubs = findViewById(R.id.queenofClubs)
@@ -71,8 +70,8 @@ class GameActivity1Level2 : AppCompatActivity() {
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()
             when (points) {
-                -1 -> startActivity(intent6)
-                5 -> startActivity(intent2)
+                -1 -> startActivity(loseScreen)
+                5 -> startActivity(winScreen)
             }
         }
         threeofClubs = findViewById(R.id.threeofClubs)
@@ -82,8 +81,8 @@ class GameActivity1Level2 : AppCompatActivity() {
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()
             when (points) {
-                -1 -> startActivity(intent6)
-                5 -> startActivity(intent2)
+                -1 -> startActivity(loseScreen)
+                5 -> startActivity(winScreen)
             }
         }
         twoofSpades = findViewById(R.id.twoofSpades)
@@ -93,8 +92,8 @@ class GameActivity1Level2 : AppCompatActivity() {
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()
             when (points) {
-                -1 -> startActivity(intent6)
-                5 -> startActivity(intent2)
+                -1 -> startActivity(loseScreen)
+                5 -> startActivity(winScreen)
             }
         }
         eightofClubs = findViewById(R.id.eightofClubs)
@@ -104,8 +103,8 @@ class GameActivity1Level2 : AppCompatActivity() {
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()
             when (points) {
-                -1 -> startActivity(intent6)
-                5 -> startActivity(intent2)
+                -1 -> startActivity(loseScreen)
+                5 -> startActivity(winScreen)
             }
         }
         sixofSpades = findViewById(R.id.sixofSpades)
@@ -115,61 +114,22 @@ class GameActivity1Level2 : AppCompatActivity() {
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()
             when (points) {
-                -1 -> startActivity(intent6)
-                5 -> startActivity(intent2)
+                -1 -> startActivity(loseScreen)
+                5 -> startActivity(winScreen)
             }
         }
         move()
     }
     fun randomPosition() = Random.nextInt(-500, 500).toFloat()
-    fun move() {
-        sixofSpades.animate()
-            .translationX(randomPosition())
-            .translationY(randomPosition())
-            .rotationBy(180f)
-            .setDuration(300)
-            .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
-        eightofClubs.animate()
-            .translationX(randomPosition())
-            .translationY(randomPosition())
-            .rotationBy(180f)
-            .setDuration(300)
-            .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
-        twoofSpades.animate()
-            .translationX(randomPosition())
-            .translationY(randomPosition())
-            .rotationBy(180f)
-            .setDuration(300)
-            .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
-        threeofClubs.animate()
-            .translationX(randomPosition())
-            .translationY(randomPosition())
-            .rotationBy(180f)
-            .setDuration(300)
-            .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
-        queenofClubs.animate()
-            .translationX(randomPosition())
-            .translationY(randomPosition())
-            .rotationBy(180f)
-            .setDuration(300)
-            .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
-        nineofClubs.animate()
-            .translationX(randomPosition())
-            .translationY(randomPosition())
-            .rotationBy(180f)
-            .setDuration(300)
-            .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
-        twoofDiamonds.animate()
-            .translationX(randomPosition())
-            .translationY(randomPosition())
-            .rotationBy(180f)
-            .setDuration(300)
-            .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
-        tenofHearts.animate()
-            .translationX(randomPosition())
-            .translationY(randomPosition())
-            .rotationBy(180f)
-            .setDuration(300)
-            .withEndAction(::move) //IF YOU REMOVE THIS IT WILL ONLY MOVE ONCE PER CLICK
+    fun move(duration: Long = 300, rotate: Float = 180f) {
+        val cardArray = arrayOf(sixofSpades, eightofClubs, twoofSpades, threeofClubs, queenofClubs, nineofClubs, twoofDiamonds, tenofHearts)
+        for (item in cardArray) {
+            item.animate()
+                .translationX(randomPosition())
+                .translationY(randomPosition())
+                .setDuration(duration)
+                .rotationBy(rotate)
+                .withEndAction(::move)
+        }
     }
 }
