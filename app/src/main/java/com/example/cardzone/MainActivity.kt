@@ -34,8 +34,8 @@ class MainActivity : AppCompatActivity() {
         //GAME3 BUTTON
         val game3Button = findViewById<Button>(R.id.game3Button)
         game3Button.setOnClickListener {
-            val game3 = Intent(this, GameActivity3::class.java)
-            //startActivity(game3)
+            val game3 = Intent(this, GameActivity1Level3::class.java)
+            startActivity(game3)
         }
     }
 }

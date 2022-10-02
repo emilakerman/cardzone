@@ -5,15 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.util.rangeTo
 import kotlin.random.Random
 
 class GameActivity1 : AppCompatActivity() {
 
-    lateinit var aceOfSpades : ImageView
-    lateinit var aceOfClubs : ImageView
-    lateinit var aceOfDiamonds : ImageView
-    lateinit var aceOfHearts : ImageView
+    lateinit var aceOfSpades: ImageView
+    lateinit var aceOfClubs: ImageView
+    lateinit var aceOfDiamonds: ImageView
+    lateinit var aceOfHearts: ImageView
     var points = 0
 
 
@@ -26,7 +25,7 @@ class GameActivity1 : AppCompatActivity() {
 
         aceOfClubs = findViewById(R.id.aceOfClubs)
         aceOfClubs.setOnClickListener {
-            aceOfClubs.animate().rotationBy(360f)//maybe move to function?
+            aceOfClubs.animate().rotationBy(360f)
             points++
             val points2 = findViewById<TextView>(R.id.points)
             points2.text = points.toString()
@@ -70,15 +69,15 @@ class GameActivity1 : AppCompatActivity() {
         }
         move()
     }
-    fun randomPosition() = Random.nextInt(-500, 500).toFloat()
-    fun move(duration: Long = 500){
-        val cardArray = arrayOf(aceOfSpades, aceOfClubs, aceOfHearts, aceOfDiamonds)
-        for (item in cardArray) {
-            item.animate()
-            .translationX(randomPosition())
-            .translationY(randomPosition())
-            .setDuration(duration)
-            .withEndAction(::move)
+        fun randomPosition() = Random.nextInt(-500, 500).toFloat()
+        fun move(duration: Long = 500) {
+            val cardArray = arrayOf(aceOfSpades, aceOfClubs, aceOfHearts, aceOfDiamonds)
+            for (item in cardArray) {
+                item.animate()
+                    .translationX(randomPosition())
+                    .translationY(randomPosition())
+                    .setDuration(duration)
+                    .withEndAction(::move)
+            }
         }
     }
-}

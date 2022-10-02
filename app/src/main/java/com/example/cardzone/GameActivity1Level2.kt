@@ -1,8 +1,10 @@
 package com.example.cardzone
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.widget.ImageView
 import android.widget.TextView
 import kotlin.random.Random
@@ -25,10 +27,9 @@ class GameActivity1Level2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game_activity1_level2)
-        supportActionBar?.hide()//REMOVES THE TOP ACTION BAR
+        supportActionBar?.hide()
         val winScreen = Intent(this, GameActivity1Level2WinScreen::class.java)
         val loseScreen = Intent(this, GameActivity1Level2LoseScreen::class.java)
-
 
         tenofHearts = findViewById(R.id.tenofHearts)
         tenofHearts.setOnClickListener {

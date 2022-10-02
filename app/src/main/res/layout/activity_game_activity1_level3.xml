@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_list"
+    tools:context=".GameActivity1Level3">
+
+    <ImageView
+        android:id="@+id/eightOfSpades"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="165dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/eightofspades" />
+
+    <ImageView
+        android:id="@+id/sevenOfHearts"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="165dp"
+        android:layout_marginEnd="220dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sevenofhearts" />
+
+    <ImageView
+        android:id="@+id/eightOfDiamonds"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="165dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/eightofdiamonds" />
+
+    <ImageView
+        android:id="@+id/nineOfClubs"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eightOfSpades"
+        app:srcCompat="@drawable/nineofclubs" />
+
+    <ImageView
+        android:id="@+id/tenOfClubs"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="220dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sevenOfHearts"
+        app:srcCompat="@drawable/tenofclubs" />
+
+    <ImageView
+        android:id="@+id/sixOfHearts"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eightOfDiamonds"
+        app:srcCompat="@drawable/sixofhearts" />
+
+    <ImageView
+        android:id="@+id/fiveOfClubs"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="590dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fiveofclubs" />
+
+    <ImageView
+        android:id="@+id/threeOfSpades"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="590dp"
+        android:layout_marginEnd="220dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/threeofspades" />
+
+    <ImageView
+        android:id="@+id/twoOfHearts"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="590dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/twoofhearts" />
+
+    <ImageView
+        android:id="@+id/fourOfSpades"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="450dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fourofspades" />
+
+    <ImageView
+        android:id="@+id/fourOfHearts"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginEnd="220dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fourofhearts" />
+
+    <ImageView
+        android:id="@+id/sevenOfDiamonds"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="450dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sevenofdiamonds" />
+
+    <TextView
+        android:id="@+id/textField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/crown3" />
+
+    <ImageView
+        android:id="@+id/crown1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="-5dp"
+        app:layout_constraintEnd_toStartOf="@+id/crown2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+    <ImageView
+        android:id="@+id/crown2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="-5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="-5dp"
+        app:layout_constraintEnd_toStartOf="@+id/crown3"
+        app:layout_constraintStart_toEndOf="@+id/crown1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+    <ImageView
+        android:id="@+id/crown3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="-5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="-5dp"
+        app:layout_constraintEnd_toStartOf="@+id/crown4"
+        app:layout_constraintStart_toEndOf="@+id/crown2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+    <ImageView
+        android:id="@+id/crown4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="-5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/crown3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

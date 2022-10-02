@@ -2,21 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_list"
-    android:id="@+id/mainLayout"
     tools:context=".GameActivity1">
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="302dp"
-        android:layout_height="303dp"
-        android:layout_marginBottom="-115dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/whiteboard1" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -27,6 +17,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pointcontainer" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="302dp"
+        android:layout_height="303dp"
+        android:layout_marginBottom="-115dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/whiteboard1" />
 
     <TextView
         android:id="@+id/textView6"

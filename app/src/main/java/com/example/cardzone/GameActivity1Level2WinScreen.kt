@@ -10,6 +10,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 class GameActivity1Level2WinScreen : AppCompatActivity() {
 
     lateinit var mainMenuButton4 : Button
+    lateinit var levelThreeButton : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +28,11 @@ class GameActivity1Level2WinScreen : AppCompatActivity() {
         mainMenuButton4.setOnClickListener {
             val mainMenu = Intent(this, MainActivity::class.java)
             startActivity(mainMenu)
+        }
+        levelThreeButton = findViewById(R.id.levelThreeButton)
+        levelThreeButton.setOnClickListener {
+            val levelthree = Intent(this, GameActivity1Level3::class.java)
+            startActivity(levelthree)
         }
 
     }

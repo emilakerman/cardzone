@@ -9,9 +9,11 @@
     <string name="you_lose">DU FÖRLORADE</string>
     <string name="main_menu">HUVUDMENY</string>
     <string name="lvl_two">NIVÅ 2</string>
+    <string name="lvl_three">NIVÅ 3</string>
     <string name="try_again">FÖRSÖK IGEN</string>
     <string name="zone_with_cards">EN ZON MED KORT</string>
     <string name="game1">SPEL 1</string>
     <string name="game2">SPEL 2</string>
     <string name="game3">SPEL 3</string>
+    <string name="seconds_until">SKYNDA NU"</string>
 </resources>

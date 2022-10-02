@@ -8,9 +8,11 @@
     <string name="you_lose">YOU LOSE</string>
     <string name="main_menu">MAIN MENU</string>
     <string name="lvl_two">LEVEL 2</string>
+    <string name="lvl_three">LEVEL 3</string>
     <string name="try_again">TRY AGAIN</string>
     <string name="zone_with_cards">A ZONE WITH CARDS</string>
     <string name="game1">GAME 1</string>
     <string name="game2">GAME 2</string>
     <string name="game3">GAME 3</string>
+    <string name="seconds_until">CLOCK IS TICKING"</string>
 </resources>

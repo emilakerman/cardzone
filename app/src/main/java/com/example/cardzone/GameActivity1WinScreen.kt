@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.constraintlayout.widget.ConstraintLayout
+import kotlinx.coroutines.NonCancellable.cancel
 
 class GameActivity1WinScreen : AppCompatActivity() {
 
@@ -23,6 +24,7 @@ class GameActivity1WinScreen : AppCompatActivity() {
         animDrawable.setEnterFadeDuration(10)
         animDrawable.setExitFadeDuration(1000)
         animDrawable.start()
+
 
         mainMenuButton = findViewById(R.id.mainMenuButton)
         mainMenuButton.setOnClickListener {
