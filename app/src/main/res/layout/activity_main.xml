@@ -8,54 +8,35 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
+    <ImageView
+        android:id="@+id/imageView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:fontFamily="sans-serif-black"
-        android:outlineSpotShadowColor="#F60D0D"
-        android:shadowColor="#F31919"
-        android:text="CARDZONE"
-        android:textColor="#FFFFFF"
-        android:textColorHighlight="#AA3232"
-        android:textSize="55sp"
+        android:layout_marginTop="-65dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cardzonelogo" />
 
     <Button
         android:id="@+id/game1Button"
         android:layout_width="180dp"
         android:layout_height="80dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="250dp"
         android:backgroundTint="#448AFF"
         android:text="@string/game1"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/game3Button"
         android:layout_width="180dp"
         android:layout_height="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         android:backgroundTint="#448AFF"
-        android:text="GAME 3"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game2Button" />
-
-    <Button
-        android:id="@+id/game2Button"
-        android:layout_width="180dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="#448AFF"
-        android:text="@string/game2"
+        android:text="test"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -77,12 +58,12 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="30dp"
         android:text="@string/zone_with_cards"
         android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/game1Button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"

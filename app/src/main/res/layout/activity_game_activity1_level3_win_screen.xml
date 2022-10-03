@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_list"
     android:id="@+id/root_layout"
-    tools:context=".GameActivity1Level2WinScreen">
+    tools:context=".GameActivity1Level3WinScreen">
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="200dp"
@@ -22,26 +22,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/mainMenuButton4"
+        android:id="@+id/mainMenuButton5"
         android:layout_width="157dp"
         android:layout_height="63dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="70dp"
         android:backgroundTint="#1100FF"
         android:text="@string/main_menu"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/levelThreeButton" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
-    <Button
-        android:id="@+id/levelThreeButton"
-        android:layout_width="157dp"
-        android:layout_height="63dp"
-        android:backgroundTint="#1100FF"
-        android:text="@string/lvl_three"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/you_beat_all"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

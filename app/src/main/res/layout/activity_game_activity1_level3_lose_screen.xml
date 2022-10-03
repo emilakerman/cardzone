@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_list"
+    android:background="@drawable/gradient_list_lose"
     android:id="@+id/root_layout"
-    tools:context=".GameActivity1Level2WinScreen">
+    tools:context=".GameActivity1Level3LoseScreen">
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="200dp"
-        android:text="@string/you_win"
+        android:text="@string/you_lose"
         android:textColor="#F8ECEC"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,26 +22,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/mainMenuButton4"
+        android:id="@+id/backtoGameButton3"
         android:layout_width="157dp"
         android:layout_height="63dp"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="#1100FF"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#FF0000"
+        android:text="@string/try_again"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <Button
+        android:id="@+id/mainMenuButton6"
+        android:layout_width="157dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#FF0000"
         android:text="@string/main_menu"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/levelThreeButton" />
-
-    <Button
-        android:id="@+id/levelThreeButton"
-        android:layout_width="157dp"
-        android:layout_height="63dp"
-        android:backgroundTint="#1100FF"
-        android:text="@string/lvl_three"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@+id/backtoGameButton3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

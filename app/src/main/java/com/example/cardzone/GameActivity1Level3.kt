@@ -1,12 +1,16 @@
 package com.example.cardzone
 
+import android.content.Intent
 import android.graphics.drawable.AnimationDrawable
+import android.graphics.drawable.Drawable
+import android.media.Image
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import kotlinx.coroutines.NonCancellable.cancel
 
 
 class GameActivity1Level3 : AppCompatActivity() {
@@ -23,38 +27,42 @@ class GameActivity1Level3 : AppCompatActivity() {
     lateinit var tenOfClubs : ImageView
     lateinit var fourOfHearts : ImageView
     lateinit var threeOfSpades : ImageView
+
     lateinit var crown1 : ImageView
     lateinit var crown2 : ImageView
     lateinit var crown3 : ImageView
     lateinit var crown4 : ImageView
 
-    var points = 0
+    lateinit var countDownTimer : CountDownTimer
+
     var timer1 = 1000
     var interval = 1000
     var infuture = 30000
+
+    var queenCount : Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game_activity1_level3)
         supportActionBar?.hide()
+
+        //BG
         val rootLayout = findViewById<ConstraintLayout>(R.id.mainLayout)
         val animDrawable = rootLayout.background as AnimationDrawable
         animDrawable.setEnterFadeDuration(10)
         animDrawable.setExitFadeDuration(500)
         animDrawable.start()
-
+        //TIMER
         val textField = findViewById<TextView>(R.id.textField)
+        val loseScreen = Intent(this, GameActivity1Level3LoseScreen::class.java)
         object : CountDownTimer(infuture.toLong(), interval.toLong()) {
-
             override fun onTick(millisUntilFinished: Long) {
-                textField.setText("Seconds remaining: " + millisUntilFinished / timer1)
+                textField.text = "Seconds remaining: " + millisUntilFinished / timer1
             }
-
             override fun onFinish() {
-                textField.setText("done!")
+                startActivity(loseScreen)
             }
         }.start()
-
 
         eightOfSpades = findViewById(R.id.eightOfSpades)
         nineOfClubs = findViewById(R.id.nineOfClubs)
@@ -74,6 +82,7 @@ class GameActivity1Level3 : AppCompatActivity() {
         crown4 = findViewById(R.id.crown4)
         motionLeft()
 
+        //CLICKS
         eightOfSpades.setOnClickListener {
             eightOfSpades.setImageResource(R.drawable.queenofclubs)
             crown1.setImageResource(R.drawable.crown)
@@ -126,25 +135,18 @@ class GameActivity1Level3 : AppCompatActivity() {
             crown4.setImageResource(R.drawable.crown)
             goodCards()
         }
+
     }
     fun badCards() {
-        interval *= 2
-        infuture *= 2
-        /*
-        when (points) {
-            -1 -> startActivity(loseScreen)
-            10 -> startActivity(winScreen)
-        }
-         */
+        timer1 += 200
     }
     fun goodCards() {
-        //points++
-        /*
-        when (points) {
-            -1 -> startActivity(loseScreen)
-            10 -> startActivity(winScreen)
+        queenCount++
+        if (queenCount == 4) {
+            val winScreen = Intent(this, GameActivity1Level3WinScreen::class.java)
+            countDownTimer.cancel()
+            startActivity(winScreen)
         }
-         */
     }
     fun positionXChangeLeft() = (350).toFloat()
     fun motionLeft(duration: Long = 1000) {

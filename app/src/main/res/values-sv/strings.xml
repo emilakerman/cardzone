@@ -16,4 +16,6 @@
     <string name="game2">SPEL 2</string>
     <string name="game3">SPEL 3</string>
     <string name="seconds_until">SKYNDA NU"</string>
+    <string name="god_save_the_queen">RÄDDA DROTTNINGARNA</string>
+    <string name="you_beat_all">DU VANN SPELET</string>
 </resources>

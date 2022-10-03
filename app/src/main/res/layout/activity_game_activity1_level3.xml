@@ -9,6 +9,29 @@
     tools:context=".GameActivity1Level3">
 
     <ImageView
+        android:id="@+id/messageBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:srcCompat="@drawable/whiteboard1" />
+
+    <TextView
+        android:id="@+id/godSaveTheQueen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/god_save_the_queen"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
         android:id="@+id/eightOfSpades"
         android:layout_width="100dp"
         android:layout_height="120dp"
