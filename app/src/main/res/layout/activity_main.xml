@@ -36,7 +36,7 @@
         android:layout_height="80dp"
         android:layout_marginTop="35dp"
         android:backgroundTint="#448AFF"
-        android:text="Credits"
+        android:text="@string/credits"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

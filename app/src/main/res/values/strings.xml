@@ -11,10 +11,9 @@
     <string name="lvl_three">LEVEL 3</string>
     <string name="try_again">TRY AGAIN</string>
     <string name="zone_with_cards">A ZONE WITH CARDS</string>
-    <string name="game1">GAME 1</string>
-    <string name="game2">GAME 2</string>
-    <string name="game3">GAME 3</string>
+    <string name="game1">PLAY</string>
     <string name="seconds_until">CLOCK IS TICKING"</string>
     <string name="god_save_the_queen">GOD SAVE THE QUEEN(S)</string>
     <string name="you_beat_all">YOU BEAT ALL LEVELS</string>
+    <string name="credits">CREDITS</string>
 </resources>
