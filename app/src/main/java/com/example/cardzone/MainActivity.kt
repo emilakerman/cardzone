@@ -34,11 +34,20 @@ class MainActivity : AppCompatActivity() {
         }
 
          */
+        /*
         //TEST button - remove at release
         val game3Button = findViewById<Button>(R.id.game3Button)
         game3Button.setOnClickListener {
             val game3 = Intent(this, GameActivity1Level3::class.java)
             startActivity(game3)
         }
+        */
+        //CREDITS button
+        val creditsButton = findViewById<Button>(R.id.creditsButton)
+        creditsButton.setOnClickListener {
+            val credits = Intent(this, GameCredits::class.java)
+            startActivity(credits)
+        }
+
     }
 }

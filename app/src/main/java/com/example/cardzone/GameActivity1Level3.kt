@@ -6,11 +6,8 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
-import android.widget.Toast.makeText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.google.android.material.snackbar.Snackbar
 
 
 class GameActivity1Level3 : AppCompatActivity() {
@@ -35,9 +32,9 @@ class GameActivity1Level3 : AppCompatActivity() {
 
     lateinit var countDownTimer : CountDownTimer
 
-    var timer1 = 1000
     var interval = 1000
     var totalSeconds = 20000
+    var secLeft = 20
 
     var queenCount : Int = 0
 
@@ -56,7 +53,8 @@ class GameActivity1Level3 : AppCompatActivity() {
         val loseScreen = Intent(this, GameActivity1Level3LoseScreen::class.java)
         countDownTimer = object : CountDownTimer(totalSeconds.toLong(), interval.toLong()) {
             override fun onTick(millisUntilFinished: Long) {
-                textField.text = "Seconds remaining: " + millisUntilFinished / timer1
+                secLeft -= 1
+                textField.text = "Seconds remaining: $secLeft"
             }
             override fun onFinish() {
                 startActivity(loseScreen)
@@ -148,7 +146,12 @@ class GameActivity1Level3 : AppCompatActivity() {
         }
     }
     fun badCards() {
-        timer1 += 200
+        val loseScreen = Intent(this, GameActivity1Level3LoseScreen::class.java)
+        secLeft -= 3
+        if (secLeft < 1) {
+            countDownTimer.cancel()
+            startActivity(loseScreen)
+        }
     }
     fun goodCards() {
         queenCount++

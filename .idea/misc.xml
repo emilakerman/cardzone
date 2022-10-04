@@ -22,6 +22,7 @@
         <entry key="app/src/main/res/layout/activity_game_activity1_level3_win_screen.xml" value="0.5124533611795178" />
         <entry key="app/src/main/res/layout/activity_game_activity1_lose_screen.xml" value="0.2883181441590721" />
         <entry key="app/src/main/res/layout/activity_game_activity1_win_screen.xml" value="0.3212424236795177" />
+        <entry key="app/src/main/res/layout/activity_game_credits.xml" value="0.2554129559060802" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.27204284667968753" />
       </map>
     </option>
