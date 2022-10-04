@@ -2,15 +2,15 @@ package com.example.cardzone
 
 import android.content.Intent
 import android.graphics.drawable.AnimationDrawable
-import android.graphics.drawable.Drawable
-import android.media.Image
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import android.widget.Toast.makeText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import kotlinx.coroutines.NonCancellable.cancel
+import com.google.android.material.snackbar.Snackbar
 
 
 class GameActivity1Level3 : AppCompatActivity() {
@@ -37,7 +37,7 @@ class GameActivity1Level3 : AppCompatActivity() {
 
     var timer1 = 1000
     var interval = 1000
-    var infuture = 30000
+    var totalSeconds = 20000
 
     var queenCount : Int = 0
 
@@ -45,7 +45,6 @@ class GameActivity1Level3 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game_activity1_level3)
         supportActionBar?.hide()
-
         //BG
         val rootLayout = findViewById<ConstraintLayout>(R.id.mainLayout)
         val animDrawable = rootLayout.background as AnimationDrawable
@@ -55,7 +54,7 @@ class GameActivity1Level3 : AppCompatActivity() {
         //TIMER
         val textField = findViewById<TextView>(R.id.textField)
         val loseScreen = Intent(this, GameActivity1Level3LoseScreen::class.java)
-        object : CountDownTimer(infuture.toLong(), interval.toLong()) {
+        countDownTimer = object : CountDownTimer(totalSeconds.toLong(), interval.toLong()) {
             override fun onTick(millisUntilFinished: Long) {
                 textField.text = "Seconds remaining: " + millisUntilFinished / timer1
             }
@@ -87,66 +86,82 @@ class GameActivity1Level3 : AppCompatActivity() {
             eightOfSpades.setImageResource(R.drawable.queenofclubs)
             crown1.setImageResource(R.drawable.crown)
             goodCards()
+            eightOfSpades.isEnabled = false
         }
         nineOfClubs.setOnClickListener {
             nineOfClubs.setImageResource(R.drawable.red_joker)
             badCards()
+            nineOfClubs.isEnabled = false
         }
         fourOfSpades.setOnClickListener {
             fourOfSpades.setImageResource(R.drawable.red_joker)
             badCards()
+            fourOfSpades.isEnabled = false
         }
         fiveOfClubs.setOnClickListener {
             fiveOfClubs.setImageResource(R.drawable.red_joker)
             badCards()
+            fiveOfClubs.isEnabled = false
         }
         eightOfDiamonds.setOnClickListener {
             eightOfDiamonds.setImageResource(R.drawable.red_joker)
             badCards()
+            eightOfDiamonds.isEnabled = false
         }
         sixOfHearts.setOnClickListener {
             sixOfHearts.setImageResource(R.drawable.queenofdiamonds)
             crown2.setImageResource(R.drawable.crown)
             goodCards()
+            sixOfHearts.isEnabled = false
         }
         sevenOfDiamonds.setOnClickListener {
             sevenOfDiamonds.setImageResource(R.drawable.red_joker)
             badCards()
+            sevenOfDiamonds.isEnabled = false
         }
         twoOfHearts.setOnClickListener {
             twoOfHearts.setImageResource(R.drawable.queenofhearts)
             crown3.setImageResource(R.drawable.crown)
             goodCards()
+            twoOfHearts.isEnabled = false
         }
         sevenOfHearts.setOnClickListener {
             sevenOfHearts.setImageResource(R.drawable.red_joker)
             badCards()
+            sevenOfHearts.isEnabled = false
         }
         tenOfClubs.setOnClickListener {
             tenOfClubs.setImageResource(R.drawable.red_joker)
             badCards()
+            tenOfClubs.isEnabled = false
         }
         fourOfHearts.setOnClickListener {
             fourOfHearts.setImageResource(R.drawable.red_joker)
             badCards()
+            fourOfHearts.isEnabled = false
         }
         threeOfSpades.setOnClickListener {
             threeOfSpades.setImageResource(R.drawable.queenofspades)
             crown4.setImageResource(R.drawable.crown)
             goodCards()
+            threeOfSpades.isEnabled = false
         }
-
     }
     fun badCards() {
         timer1 += 200
     }
     fun goodCards() {
         queenCount++
+        //makeText(this, "NICE!", Toast.LENGTH_SHORT).show()
         if (queenCount == 4) {
             val winScreen = Intent(this, GameActivity1Level3WinScreen::class.java)
             countDownTimer.cancel()
             startActivity(winScreen)
         }
+    }
+    override fun onPause() {
+        super.onPause()
+        countDownTimer.cancel()
     }
     fun positionXChangeLeft() = (350).toFloat()
     fun motionLeft(duration: Long = 1000) {
